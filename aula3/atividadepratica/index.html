@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade Prática</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <div class="container">
+
+    <section>
+      <label for="campooculto" onclick="mudarTipoCampo()"> Digite algo aqui </label>
+      <input type="hidden" name="campooculto" id="campooculto">
+    </section>
+    
+    <section>
+      <label for="datanascimento">Digite a data do seu nascimento</label>
+      <input type="date" name="datanascimento" value="2022-03-22"/>
+    </section>
+
+    <section>
+      <label for="horanascimento">Digite a hora do seu nascimento</label>
+      <input type="time" name="horanascimento" />
+    </section>
+
+    <section>
+      <label for="datahoranascimento">Coloque a data e hora do seu nascimento</label>
+      <input type="datetime" name="datahoranascimento" placeholder="Essa forma está descontinuada"/>
+    </section>
+
+    <section>
+      <label for="datahoradenascimento">Coloque a data e hora do seu nascimento</label>
+      <input type="datetime-local" name="datahoradenascimento" value="2022-04-09T17:30"/>
+    </section>
+
+    <section>
+      <label for="mesnascimento">Coloque o mês em que você nasceu</label>
+      <input type="month" name="mesnascimento" />
+    </section>
+
+    <section>
+      <label for="semananascimento">Coloque o semana em que você nasceu</label>
+      <input type="week" name="semananascimento" />
+    </section>
+
+  </div>
+
+  <script type="text/javascript">
+    function mudarTipoCampo(){
+      let teste = document.getElementById("campooculto").getAttribute("type");
+      if(teste == "hidden"){
+        document.getElementById("campooculto").setAttribute("type", "text");
+      } else {
+        document.getElementById("campooculto").setAttribute("type", "hidden");
+      }
+    }
+  </script>
+</body>
+</html>

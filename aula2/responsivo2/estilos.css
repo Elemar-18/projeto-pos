@@ -1,0 +1,144 @@
+:root{
+  --cor-detalhe: #E74C3C;
+  --cor-principal: #FFD200;
+  --cor-secundaria: #20374B;
+  --cor-fundo: #FFFFFF;
+  --cor-menu: #E5E5E5;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.cabecalho{
+  /* padding: 20px 10px; */
+}
+
+.cabecalho-titulo{
+  padding: 20px 10px;
+  background-image: linear-gradient(-90deg, 
+  rgba(255,210,0.64) 0%, 
+  rgba(237,246,247,0) 100%), url('../img/fundo_cabecalho.png');
+  background-size: cover;
+}
+
+.titulo{
+  max-width: 500px;
+  font-size: 22px;
+  text-align: right;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+
+.menu{
+  display: none;
+}
+
+@media (min-width: 500px){
+  .menu{
+    display: block;
+  }
+
+  #icone-menu{
+    display: none;
+  }
+}
+
+#icone-menu{
+  cursor: pointer;
+}
+
+.menu ul{
+  /* padding-left: 20px; */
+  list-style: none;
+  opacity: 0.6;
+}
+
+.menu a {
+  background-color: var(--cor-menu);
+  color: var(--cor-secundaria);
+  padding: 5px;
+  text-decoration: none;
+  display: block;
+}
+
+.menu a:hover{
+  color: var(--cor-menu);
+  background-color: var(--cor-secundaria);
+}
+
+@media (min-width: 500px){
+  .menu a, .menu li{
+    display: inline-block;
+  }
+
+  .menu ul{
+    background-color: var(--cor-menu);
+  }
+}
+
+.data-eventos{
+  width: 90%;
+  margin: 20px auto;
+  background-color: var(--cor-principal);
+  color: var(--cor-secundaria);
+}
+
+.texto-eventos{
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
+  line-height: 35px;
+}
+
+.sobre-eventos{
+  width: 90%;
+  margin: 20px auto;
+}
+
+.sobre-eventos p{
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.programacao{
+  width: 90%;
+  margin: 20px auto;
+}
+
+.titulo-programacao, .subtitulo-programacao{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.cursos{
+  margin-top: 20px auto;
+  display: inline-block;
+}
+
+.cursos img{
+  border-radius: 50%;
+}
+
+.titulo-curso, .nome-palestrante{
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+}
+
+.sobre-cursos{
+  display: block;
+}
+
+.dados-cursos{
+  display: inline-block;
+}

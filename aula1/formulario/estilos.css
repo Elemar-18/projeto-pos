@@ -1,0 +1,57 @@
+:root{
+  --cor-primaria: #1C6EBC;
+  --cor-texto: #605856;
+  --cor-detalhe: #274156;
+  --cor-fundo: #FBFCFF;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.formulario label{
+  color: var(--cor-texto);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.formulario input[type="text"],
+.formulario textarea{
+  padding: 10px;
+  width: 100%;
+  border: 1px var(--cor-detalhe) solid;
+  border-radius: 5px;
+  color: var(--cor-primaria);
+  outline: none;
+}
+
+.formulario > div{
+  margin: 10px;
+}
+
+.estado{
+  width: 100%;
+  padding: 10px;
+  border: 1px var(--cor-detalhe) solid;
+  border-radius: 5px;
+}
+
+.botao{
+  background-color: var(--cor-detalhe);
+  color: var(--cor-fundo);
+  border: none;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.botao:hover{
+  opacity: 0.8;
+}
+
+.estado option{
+  background-color: var(--cor-primaria);
+  color: var(--cor-detalhe)
+}

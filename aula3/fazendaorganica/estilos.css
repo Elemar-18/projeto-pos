@@ -1,0 +1,126 @@
+:root{
+  --cor-principal: #1B4436;
+  --cor-principal-opaca: rgba(27, 68, 64, 0.6);
+  --cor-secundaria: #50AA5A;
+  --cor-texto: #000;
+  --cor-fundo: #FFF;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.barra-menu{
+  background-color: var(--cor-principal);
+}
+
+.barra-menu > div{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.menu{
+  list-style: none;
+  display: flex;
+}
+
+.menu > li {padding: 10px;}
+
+.menu a{
+  color: var(--cor-fundo);
+  padding: 10px;
+  text-decoration: none;
+}
+
+.menu a:hover{
+  text-decoration: underline;
+}
+
+.titulo{
+  background-image: url('img/fundo-fazenda.png');
+  background-size: cover;
+  height: 400px;
+}
+
+.titulo-conteudo{
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 70%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titulo-conteudo h1{
+  color: var(--cor-fundo);
+  background-color: var(--cor-principal-opaca);
+  padding: 10px;
+  opacity: 0.8;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+  line-height: 60px;
+}
+
+.conteudo{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.cartao{
+  border: 1px solid var(--cor-secundaria);
+  border-radius: 20px;
+  padding: 20px;
+  max-width: 390px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.cartao:hover{
+  background-color: #C5C5C5;
+}
+
+.cartao div{
+  padding: 10px;
+}
+
+.subtitulo{
+  /* text-align: center; */
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  /* padding-bottom: 10px; */
+}
+
+.imagem{
+  text-align: center;
+}
+
+.texto{
+  line-height: 1.5;
+  /* padding-bottom: 10px;
+  max-width: 325px; */
+}
+
+.botao{
+  background-color: var(--cor-secundaria);
+  text-decoration: none;
+  color: var(--cor-fundo);
+  padding: 10px;
+  border-radius: 20px;
+  display: block;
+  max-width: 325px;
+  width: 100%;
+}
+
+.botao:hover{
+  opacity: 0.75;
+}

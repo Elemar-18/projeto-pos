@@ -1,0 +1,63 @@
+:root{
+  --cor-principal: #7159C1;
+  --cor-secundaria: #AA9BDA;
+  --cor-auxiliar: #C4C4C4;
+}
+
+*{
+ margin: 0;
+ padding: 0; 
+ box-sizing: border-box; 
+}
+
+#menu{
+  background-color: var(--cor-secundaria);
+  grid-area: menu;
+  height: 50px;
+}
+
+#titulo{
+  background-color: var(--cor-principal);
+  grid-area: titulo;
+  height: 200px;
+}
+
+#conteudo{
+  background-color: var(--cor-auxiliar);
+  grid-area: conteudo;
+  height: 500px;
+}
+
+#lateral{
+  background-color: var(--cor-secundaria);
+  grid-area: lateral;
+  height: 500px;
+}
+
+#secao1, #secao21, #secao22, #secao23{
+  background-color: var(--cor-auxiliar);
+  height: 100px;
+}
+
+#secao1{ grid-area: secao1; }
+#secao21{ grid-area: secao21; }
+#secao22{ grid-area: secao22; }
+#secao23{ grid-area: secao23; }
+
+#rodape{
+  background-color: var(--cor-secundaria);
+  grid-area: rodape;
+  height: 200px;
+}
+
+.container{
+  display: grid;
+  grid-template-areas: 
+    "menu menu menu menu menu"
+    "titulo titulo titulo titulo titulo"
+    ". conteudo conteudo lateral ."
+    ". secao1 secao1 secao1 ."
+    ". secao21 secao22 secao23 ."
+    "rodape rodape rodape rodape rodape";
+  gap: 10px;
+}

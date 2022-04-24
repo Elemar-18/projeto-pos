@@ -1,0 +1,39 @@
+:root{
+  --cor-primaria: #FFFFFF;
+  --cor-secundaria: #1A1A1A;
+  --cor-contraste: #E2E2E2; 
+  --cor-detalhe: #D3310C;
+} 
+
+.tabela, .tabela th, .tabela td{
+  /* border: 1px var(--cor-secundaria) solid; */
+}
+
+.tabela{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.tabela th{
+  background-color: var(--cor-secundaria);
+  color: var(--cor-primaria);
+  padding: 20px 0;
+}
+
+.tabela td{
+  text-align: center;
+}
+
+.tabela tr:nth-child(odd){
+  background-color: var(--cor-contraste);
+}
+
+.tabela tr:hover{
+  background-color: var(--cor-detalhe);
+  color: var(--cor-primaria);
+}
+
+.foto{
+  border-radius: 5px;
+  border: 1px solid var(--cor-secundaria)
+}

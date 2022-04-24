@@ -1,0 +1,29 @@
+:root{
+  --cor-principal: #191970;
+  --cor-secundaria: #836FFF;
+}
+
+*{
+ margin: 0;
+ padding: 0; 
+ box-sizing: border-box; 
+}
+
+.container{
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column; 
+  align-content: space-between;
+  margin-top: 20px;
+}
+
+.container section{
+  padding: 20px;
+}
+
+.container input{
+  margin-right: 40px;
+  margin-left: 20px;
+  padding: 5px 30px;
+  border-radius: 20px;
+}
