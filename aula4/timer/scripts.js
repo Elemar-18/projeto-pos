@@ -5,11 +5,18 @@ var cronometro;
 var tempo = 1000;
 
 function iniciar(){
-  cronometro = setInterval(chamarEvento, tempo); 
+  cronometro = setInterval(() => { chamarEvento(); }, tempo);
+  document.getElementById("btn-iniciar").style.display = "none";
+  document.getElementById("btn-pausar").style.display = "block";
+  document.getElementById("btn-parar").style.display = "block";
 }
 
 function pausar(){
   clearInterval(cronometro);
+  document.getElementById("btn-iniciar").style.display = "none";
+  document.getElementById("btn-pausar").style.display = "block";
+  document.getElementById("btn-pausar").innerHTML = "Continuar";
+  document.getElementById("btn-parar").style.display = "block";
 }
 
 function parar(){
