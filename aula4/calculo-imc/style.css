@@ -1,0 +1,43 @@
+.column-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn{
+  background-color: lightgray;
+  border: none;
+  color: black;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  transition-duration: 0.4s;
+  margin: 5px;
+}
+
+.btn:hover {
+background-color: gray;
+color:white;
+cursor: pointer;
+}
+
+th{
+  padding: 10px;
+  text-align: center;
+  background-color: #993399;
+  color: white;
+  font-weight: bold;
+}
+
+td{
+  text-align: center;
+}
+
+.selected{
+  color: white;
+  background-color: blue;
+}

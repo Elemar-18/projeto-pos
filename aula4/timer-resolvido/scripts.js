@@ -24,7 +24,7 @@ function parar() {
 
 function iniciar() {
   if (!idInterval) {
-    idInterval = setInterval(mudarTempo, 1000);
+    idInterval = setInterval(mudarTempo, 100);
   }
 }
 
