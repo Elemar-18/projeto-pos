@@ -1,36 +1,46 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>todolist</title>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>To-do-list</title>
+	<link rel="stylesheet" href="style.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;0,900;1,400&family=Montserrat:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+	
 </head>
-
 <body>
-    <div class="container">
-        <div class="app">
-            <h1>TO DO LIST</h1>
-            <form>
-                <input type="text" placeholder="Add new task...">
-                <button type="submit">&plus;</button>
-            </form>
-            <ul>
-                <li>
-                    <input type="checkbox" onclick="taskComplete(this)" class="check">
-                    <input type="text" value="Exercise" class="task" onfocus="getCurrentTask(this)"
-                        onblur="editTask(this)">
-                    <i class="fa fa-trash" onclick="removeTask(this)"></i>
-                </li>
-            </ul>
-        </div>
-    </div>
-</body>
-<footer>
-    <script type="text/javascript" src="scripts.js"></script>
-</footer>
+	
+	<main class="app">
+		<section class="greeting">
+			<h2 class="title">
+				E aí, <input type="text" id="name" placeholder="Qual o seu nome?" />
+			</h2>
+		</section>
+		
+		<section class="create-todo">
+			<h3>CRIAR UM TODO LIST</h3>
+			<form id="new-todo-form">
+				<h4>O que você tem pra fazer?</h4>
+				<input 
+					type="text" 
+					placeholder="Exemplo: Vou tomar café"
+					name="content"
+					id="content" />
+				<input type="submit" value="Adicionar tarefa" />
+			</form>
+		</section>
 
+		<section class="todo-list">
+			<h3>SUAS TAREFAS A REALIZAR</h3>
+			<div class="list" id="todo-list"></div>
+		</section>
+
+	</main>
+
+	<script src="script.js"></script>
+	
+</body>
 </html>
