@@ -90,7 +90,7 @@ function DisplayTodos () {
 
 		})
 
-		edit.addEventListener('click', (e) => {
+		edit.addEventListener('click', () => {
 			const input = content.querySelector('input');
 			input.removeAttribute('readonly');
 			input.focus();
@@ -103,7 +103,7 @@ function DisplayTodos () {
 			})
 		})
 
-		deleteButton.addEventListener('click', (e) => {
+		deleteButton.addEventListener('click', () => {
 			todos = todos.filter(t => t != todo);
 			localStorage.setItem('todos', JSON.stringify(todos));
 			DisplayTodos()

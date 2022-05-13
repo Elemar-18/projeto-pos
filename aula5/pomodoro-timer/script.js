@@ -1,0 +1,151 @@
+const timer = document.querySelector(".timer-time");
+const start = document.querySelector(".timer-start");
+const stop = document.querySelector(".timer-stop");
+const reset = document.querySelector(".timer-reset");
+const work = document.querySelector(".options-work");
+const shortBreakBtn = document.querySelector(".short-break");
+const longBreakBtn = document.querySelector(".long-break");
+const current = document.querySelector(".currently-mode");
+const container = document.querySelector(".container");
+
+let seconds = 0,
+	active = false,
+	intervalID;
+
+const startTimer = mins => {
+	clearInterval(intervalID);
+
+	if (!active) {
+		timer.textContent = "25:00";
+		seconds = mins * 60 || 0;
+	}
+
+	active = true;
+
+	current.textContent = "TRABALHANDO";
+	container.style.backgroundColor = "var(--background-work)";
+
+	if (active) {
+		intervalID = setInterval(time, 1000);
+	}
+};
+
+const shortBreakTimer = mins => {
+	resetTime();
+	clearInterval(intervalID);
+
+	if (!active) {
+		timer.textContent = "5:00";
+		seconds = mins * 60 || 0;
+	}
+
+	active = true;
+
+	current.textContent = "PARADA CURTA";
+	container.style.backgroundColor = "var(--background-short-break)";
+
+	if (active) {
+		intervalID = setInterval(time, 1000);
+	}
+};
+
+const longBreakTimer = mins => {
+	resetTime();
+	clearInterval(intervalID);
+
+	if (!active) {
+		timer.textContent = "15:00";
+		seconds = mins * 60 || 0;
+	}
+
+	active = true;
+
+	current.textContent = "PARADA LONGA";
+	container.style.backgroundColor = "var(--background-long-break)";
+
+	if (active) {
+		intervalID = setInterval(time, 1000);
+	}
+};
+
+
+const resetTime = () => {
+	clearInterval(intervalID);
+	timer.textContent = "25:00";
+	active = false;
+	current.textContent = "-";
+	container.style.backgroundColor = "var(--background-work)";
+};
+
+const stopTime = () => {
+	clearInterval(intervalID);
+	current.textContent = "PARADO";
+};
+
+const time = () => {
+	seconds--;
+	minutes = Math.floor(seconds / 60);
+	sec = seconds % 60;
+
+	if (sec < 10) {
+		sec = `0${sec}`;
+	}
+
+	timer.textContent = `${minutes}:${sec}`;
+
+	if (seconds === 0) {
+		clearInterval(intervalID);
+		playSound();
+		showMessage();
+	}
+};
+
+const playSound = () => {
+	let mp3Source = '<source src="../audio/notification.mp3" type="audio/mpeg">';
+	let oggSource = '<source src="../audio/notification.ogg" type="audio/ogg">';
+	let embedSource =
+		'<embed hidden="true" autostart="true" loop="false" src="../audio/notification.mp3">';
+	document.querySelector(".sound").innerHTML =
+		'<audio autoplay="autoplay">' + mp3Source + oggSource + embedSource + "</audio>";
+};
+
+start.addEventListener(
+	"click",
+	function() {
+		startTimer(25);
+	},
+	false
+);
+stop.addEventListener("click", stopTime, false);
+reset.addEventListener("click", resetTime, false);
+work.addEventListener(
+	"click",
+	function() {
+		resetTime();
+	},
+	false
+);
+work.addEventListener(
+	"click",
+	function() {
+		startTimer(25);
+	},
+	false
+);
+
+shortBreakBtn.addEventListener(
+	"click",
+	function() {
+		shortBreakTimer(5);
+		container.style.backgroundColor = "var(--background-short-break)";
+	},
+	false
+);
+
+longBreakBtn.addEventListener(
+	"click",
+	function() {
+		longBreakTimer(15);
+	},
+	false
+);
