@@ -6,10 +6,10 @@
   --cor-fundo-alternativa: #C4C4C4;
 }
 
-*{
+/* *{
   padding: 0;
   margin: 0;
-}
+} */
 
 .menu{
   background-color: var(--cor-fundo-alternativa);
